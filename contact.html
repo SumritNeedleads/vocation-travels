@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us – Vocation Travels And Tours</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body class="relative flex flex-col min-h-screen">
+  <!-- Header -->
+  <div id="header"></div>
+
+  <main class="flex-grow">
+    <!-- Banner Section with Video Background -->
+    <section class="relative h-screen w-full overflow-hidden">
+      <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+        <source src="assets/videos/hero-video.mp4" type="video/mp4">
+        Your browser doesn’t support video.
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+        <h1 class="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl max-w-3xl mb-6">
+          Contact Vocation Travels And Tours
+        </h1>
+        <p class="text-white text-base sm:text-lg md:text-xl max-w-2xl mb-4">
+          Reach out to us for travel packages, visa assistance, and more. We’re here to help!
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Details & Form Section -->
+    <section class="py-12 px-4 sm:px-8 md:px-16 lg:px-32 bg-white">
+      <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">Contact & Office Details</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h3 class="text-lg font-semibold text-indigo-700 mb-2">INDIA - NEW DELHI</h3>
+            <p class="text-gray-700 mb-2">Room No. 309, 3rd Floor, Transport Authority Building,<br>Distt. Centre Janak Puri New Delhi - 110058</p>
+            <p class="text-gray-700 mb-2">PH: 01145607479 - Office</p>
+            <p class="text-gray-700 mb-2">9999447373 - Mr. Vinod</p>
+            <p class="text-gray-700 mb-2">7982938239 - Mr. Sawan</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-indigo-700 mb-2">CANADA - OAKVILLE, ONTARIO</h3>
+            <p class="text-gray-700 mb-2">‪+1-437-937-3479‬ - Ms. Renu</p>
+            <p class="text-gray-700 mb-2">‪+1-437-410-8979‬ - Mr. Utkarsh</p>
+          </div>
+        </div>
+        <div class="mb-8 text-center">
+          <h3 class="text-lg font-semibold text-indigo-700 mb-2">Email</h3>
+          <p class="text-gray-700 mb-2">Info@vocationtravels.com</p>
+          <p class="text-gray-700 mb-2">Visa@vocationtravels.com</p>
+        </div>
+        <form class="grid grid-cols-1 gap-6" autocomplete="off">
+          <div>
+            <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+            <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+          </div>
+          <div>
+            <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+            <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+          </div>
+          <div>
+            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="inline-block px-6 py-3 bg-indigo-600 text-white font-semibold rounded hover:bg-indigo-700 transition-colors">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
