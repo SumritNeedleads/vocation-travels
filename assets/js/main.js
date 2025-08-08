@@ -18,42 +18,26 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initHeaderJS() {
-  // Mobile nav toggle
+  // New fullscreen mobile nav logic
   const navToggle = document.getElementById('nav-toggle');
-  const navMenu = document.getElementById('nav-menu');
-  if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('hidden');
-    });
-  }
+  const navClose = document.getElementById('nav-close');
+  const mobileMenu = document.getElementById('mobile-menu-overlay');
 
-  // Dropdown for Travel Packages
-  const travelBtn = document.getElementById('travel-packages-btn');
-  const travelMenu = document.getElementById('travel-packages-menu');
-  if (travelBtn && travelMenu) {
-    // Show on click (mobile)
-    travelBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      travelMenu.classList.toggle('hidden');
+  if (navToggle && navClose && mobileMenu) {
+    navToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+      mobileMenu.classList.add('opacity-100');
     });
-    // Hide on click outside
-    document.addEventListener('click', (e) => {
-      if (!travelBtn.contains(e.target) && !travelMenu.contains(e.target)) {
-        travelMenu.classList.add('hidden');
-      }
+    navClose.addEventListener('click', () => {
+      mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+      mobileMenu.classList.remove('opacity-100');
     });
-    // Show on hover (desktop)
-    travelBtn.addEventListener('mouseenter', () => {
-      if (window.innerWidth >= 640) travelMenu.classList.remove('hidden');
-    });
-    travelBtn.addEventListener('mouseleave', () => {
-      if (window.innerWidth >= 640) setTimeout(() => travelMenu.classList.add('hidden'), 200);
-    });
-    travelMenu.addEventListener('mouseenter', () => {
-      if (window.innerWidth >= 640) travelMenu.classList.remove('hidden');
-    });
-    travelMenu.addEventListener('mouseleave', () => {
-      if (window.innerWidth >= 640) travelMenu.classList.add('hidden');
+    // Close on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+        mobileMenu.classList.remove('opacity-100');
+      });
     });
   }
 }
